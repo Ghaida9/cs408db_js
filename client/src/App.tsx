@@ -10,6 +10,9 @@ import Progress from "./pages/Progress";
 import Leaderboard from "./pages/Leaderboard";
 import GameResults from "./pages/GameResults";
 
+import { useState } from "react";
+import SplashScreen from "./components/SplashScreen";
+
 function Router() {
   return (
     <Switch>
@@ -25,12 +28,20 @@ function Router() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster richColors position="top-center" />
-          <Router />
+
+          {loading ? (
+            <SplashScreen onComplete={() => setLoading(false)} />
+          ) : (
+            <Router />
+          )}
+
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

@@ -198,18 +198,23 @@ VALUES
 INSERT INTO badges
   (name, description, iconEmoji, rarity, requiredXp, requiredQuestionsCompleted, requiredGamesCompleted, requiredStreak, requiredPerfectScores)
 VALUES
-  ('First Steps',       'Complete your first question',      'ðŸŒ±', 'common',    NULL, 1,    NULL, NULL, NULL),
-  ('Quick Start',       'Complete your first full game',     'ðŸŒ¿', 'common',    NULL, NULL, 1,    NULL, NULL),
-  ('Scholar',           'Answer 10 questions correctly',     'ðŸ“–', 'common',    NULL, 10,   NULL, NULL, NULL),
-  ('Dedicated Learner', 'Complete 5 games',                  'ðŸŽ¯', 'rare',      NULL, NULL, 5,    NULL, NULL),
-  ('XP Hunter',         'Earn 500 XP',                       'âš¡', 'rare',      500,  NULL, NULL, NULL, NULL),
-  ('Streak Master',     'Maintain a 3-day streak',           'ðŸ”¥', 'rare',      NULL, NULL, NULL, 3,    NULL),
-  ('Perfectionist',     'Score 100% on a question',          'ðŸ’Ž', 'rare',      NULL, NULL, NULL, NULL, 1),
-  ('Database Expert',   'Answer 25 questions',               'ðŸ§ ', 'epic',      NULL, 25,   NULL, NULL, NULL),
-  ('Level 5 Scholar',   'Reach Level 5',                     'ðŸ…', 'epic',      1600, NULL, NULL, NULL, NULL),
-  ('Perfect Streak',    'Score 100% on 5 questions',         'ðŸŒŸ', 'epic',      NULL, NULL, NULL, NULL, 5),
-  ('DB Master',         'Complete 10 games',                 'ðŸ†', 'legendary', NULL, NULL, 10,   NULL, NULL),
-  ('Grandmaster',       'Earn 2000 XP',                      'ðŸ‘‘', 'legendary', 2000, NULL, NULL, NULL, NULL);
+  ('First Steps',       'Complete your first question',      '🌱', 'common',    NULL, 1,    NULL, NULL, NULL),
+  ('Quick Start',       'Complete your first full game',     '🌿', 'common',    NULL, NULL, 1,    NULL, NULL),
+  ('Scholar',           'Answer 10 questions correctly',     '📖', 'common',    NULL, 10,   NULL, NULL, NULL),
+  ('Scholar',           'Answer 10 questions correctly',     '🎯', 'common',    NULL, 10,   NULL, NULL, NULL),
+  ('XP Hunter',         'Earn 500 XP',                       '⚡', 'rare',      500,  NULL, NULL, NULL, NULL),
+  ('Dedicated Learner', 'Complete 5 games',                  '🔥', 'rare',      NULL, NULL, 5,    NULL, NULL),
+  ('XP Hunter',         'Earn 500 XP',                       '💎', 'rare',      500,  NULL, NULL, NULL, NULL),
+  ('Streak Master',     'Maintain a 3-day streak',           '🧠', 'rare',      NULL, NULL, NULL, 3,    NULL),
+  ('Perfectionist',     'Score 100% on a question',          '🏅', 'rare',      NULL, NULL, NULL, NULL, 1),
+  ('Database Expert',   'Answer 25 questions',               '🌟', 'epic',      NULL, 25,   NULL, NULL, NULL),
+  ('DB Master',         'Complete 10 games',                 '🏆', 'legendary', NULL, NULL, 10,   NULL, NULL),
+  ('Grandmaster',       'Earn 2000 XP',                      '👑', 'legendary', 2000, NULL, NULL, NULL, NULL);
+  ('Streak Master',     'Maintain a 3-day streak',           '🔥', 'rare',      NULL, NULL, NULL, 3,    NULL),
+  ('Level 5 Scholar',   'Reach Level 5',                     '🌟', 'epic',      1600, NULL, NULL, NULL, NULL),
+  ('Perfect Streak',    'Score 100% on 5 questions',         '🌸', 'epic',      NULL, NULL, NULL, NULL, 5),
+  ('DB Master',         'Complete 10 games',                 '🏆', 'legendary', NULL, NULL, 10,   NULL, NULL),
+  ('Grandmaster',       'Earn 2000 XP',                      '👑', 'legendary', 2000, NULL, NULL, NULL, NULL);
 
 SELECT CONCAT('Questions seeded: ', COUNT(*)) AS status FROM questions
 UNION ALL
